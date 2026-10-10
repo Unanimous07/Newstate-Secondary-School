@@ -15,6 +15,7 @@
       <a href="#learning" (click)="closeMenu()">Learning</a>
       <a href="#life" (click)="closeMenu()">School life</a>
       <a href="#admissions" (click)="closeMenu()">Admissions</a>
+      <a href="#faq" (click)="closeMenu()">FAQ</a>
       <a class="nav-cta" href="#contact" (click)="closeMenu()">Get in touch <span>↗</span></a>
     </nav>
   </header>
@@ -90,6 +91,47 @@
         <a class="button button-dark" href="#contact">Begin your journey <span>↗</span></a>
       </div>
     </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <p class="eyebrow">Got questions?</p>
+        <h2>Frequently asked<br /><i>questions.</i></h2>
+        <div class="faq-list">
+          <div class="faq-item" [class.is-open]="activeFaq() === 0">
+            <button class="faq-question" type="button" (click)="toggleFaq(0)">
+              What are the requirements for registration? <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Registration for the 2026 academic year is currently in progress. Applicants need to present previous school reports, certificate of completion, and visit our campus for registration processing.
+            </div>
+          </div>
+          <div class="faq-item" [class.is-open]="activeFaq() === 1">
+            <button class="faq-question" type="button" (click)="toggleFaq(1)">
+              What are Newstate's national exam pass rates? <span>+</span>
+            </button>
+            <div class="faq-answer">
+              We maintain exceptional academic standards with a **98% JCE pass rate** and an **86.7% MSCE pass rate**, featuring top student scores reaching 17 points.
+            </div>
+          </div>
+          <div class="faq-item" [class.is-open]="activeFaq() === 2">
+            <button class="faq-question" type="button" (click)="toggleFaq(2)">
+              What subjects and activities are available? <span>+</span>
+            </button>
+            <div class="faq-answer">
+              We provide a robust Malawi curriculum across sciences, arts, and commercial studies, complemented by sports, debate, arts, and leadership societies.
+            </div>
+          </div>
+          <div class="faq-item" [class.is-open]="activeFaq() === 3">
+            <button class="faq-question" type="button" (click)="toggleFaq(3)">
+              How can I contact the school administration? <span>+</span>
+            </button>
+            <div class="faq-answer">
+              You can call us anytime at +265 (0) 994 484 148 or +265 (0) 990 273 692, or click the WhatsApp floating button on this page for instant support.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="contact">
@@ -110,4 +152,8 @@
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/265994484148?text=Hello,%20I%20would%20like%20to%20inquire%20about%20registration%20at%20Newstate%20Secondary%20School." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    💬 Chat on WhatsApp
+  </a>
 </div>
